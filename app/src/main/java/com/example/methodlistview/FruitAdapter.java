@@ -25,15 +25,27 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Fruit fruit = getItem(position); // 获取当前项的Fruit实例
+        // 获取当前项的Fruit实例
+        Fruit fruit = getItem(position);
 
-            View  view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
+        // 从上下文中获取LayoutInflater实例，并将自定义的布局文件"resourceId"解析成View对象
+        View view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
 
-            ImageView fruitImage = (ImageView) view.findViewById (R.id.fruit_image);
-            TextView fruitName = (TextView) view.findViewById (R.id.fruit_name);
+        // 查找布局文件中的ImageView控件，ID为fruit_image
+        ImageView fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
+
+        // 查找布局文件中的TextView控件，ID为fruit_name
+        TextView fruitName = (TextView) view.findViewById(R.id.fruit_name);
+
+        // 设置ImageView控件的图片资源，使用Fruit实例中的图片ID
         fruitImage.setImageResource(fruit.getImageId());
+
+        // 设置TextView控件的文本，使用Fruit实例中的名称
         fruitName.setText(fruit.getName());
+
+        // 返回解析后的View对象
         return view;
     }
+
 
 }
