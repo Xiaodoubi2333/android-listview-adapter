@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/fruit_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 设置 TextView 左侧的外边距为 10dp，与父布局的左边缘保持 10dp 的距离 -->
+    <TextView
+        android:id="@+id/fruit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp" />
+
+
+
+</LinearLayout>
